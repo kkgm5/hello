@@ -87,6 +87,7 @@ public class ValidationItemControllerV2 {
         Item savedItem = itemRepository.save(item);
         redirectAttributes.addAttribute("itemId", savedItem.getId());
         redirectAttributes.addAttribute("status", true);
+
         return "redirect:/validation/v2/items/{itemId}";
     }
 
